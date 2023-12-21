@@ -1,20 +1,29 @@
-import React from 'react'
-import Header from './components/Header'
-import Hakkimizda from './components/Hakkimizda'
-import Iletisim from './components/Iletisim'
-import BeniSasirt from './components/BeniSasirt'
-import Mutlu from './components/mutlu'
-import Hissemoji from './components/HissEmoji'
+import Header from './components/Header';
+import Guide from './components/Guide';
+import Hissemoji from './components/hissemoji';
+import BeniSasirt from './components/BeniSasirt';
+import Trendler from './components/Trendler';
+import Hakkimizda from './components/Hakkimizda';
+import Iletisim from './components/Iletisim';
+import {BrowserRouter as  Router, Routes, Route} from 'react-router-dom';
+import Footer from './components/Footer';
 
-const App = () => {
+
+function App() {
   return (
-    <div className='container mx-auto p-4 grid gap-16'>
-        <Header/>
-        <Hissemoji/>
+    <Router>
+      <Header/>
+      <Routes>
+        <Route path='/' element={<Guide/>}/>
+        <Route path='/Hissemoji' element={<Hissemoji/>}/>
+        <Route path='/BeniSasirt' element={<BeniSasirt/>}/>
+        <Route path='/Trendler' element={<Trendler/>}/>
+        <Route path='/Hakkimizda' element={<Hakkimizda/>}/>
+        <Route path='/Iletisim' element={<Iletisim/>}/>
 
-      
-    </div>
-    
+      </Routes>
+      <Footer/>
+    </Router>
   )
 }
 

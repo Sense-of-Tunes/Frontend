@@ -3,7 +3,7 @@ import zeynep from '../assets/zeynep.jpeg'
 import yakup from '../assets/yakup.jpeg'
 import talha from '../assets/talha.jpeg'
 import asude from '../assets/asude.jpeg'
-import { FaGithub, FaLinkedin} from "react-icons/fa";
+import { FaGithub,FaLinkedin } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 
 

@@ -8,3 +8,9 @@ export async function getAllEmoji(){
     const response = await data.json()
     return response
 }
+
+export async function getTrend(){
+    const data = await fetch('http://localhost:5242/api/Music/getTrendMuzikler')
+    const response = await data.json()
+    return response
+} 

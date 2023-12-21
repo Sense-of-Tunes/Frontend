@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getMusicByCategory } from '../sevices/musicService';
-import { IoHeadset } from "react-icons/io5";
+import { IoHeadset } from "react-icons/io5"
 import { Link } from 'react-router-dom';
 
 function Mutlu() {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getAllEmoji } from '../sevices/musicService'
+import { getAllEmoji } from '../services/musicService'
 
 function hissemoji() {
 
@@ -22,9 +22,7 @@ function hissemoji() {
         veri && veri.map(result =>(
           <div className='w-64 h-40 border-2 border-color1 rounded-lg flex justify-center flex-col items-center shadow-2xl hover:text-color1 hover:bg-gray-100'>
         <div className='text-3xl'>{result.emoji}</div>
-        <div className=' text-lg'>
-            {result.duygu}
-        </div>
+       
       </div>
         ))
       }

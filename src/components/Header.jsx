@@ -1,24 +1,35 @@
 import React from 'react'
 import Logo from '../assets/logo.jpeg';
+import { Link } from 'react-router-dom';
+
 const Header = () => {
   return (
-    <div className='flex justify-between items-center mb-6'>
-      <div className='flex justify-between items-center'>
-        <img src={Logo} alt='Logo' className='w-10 h-10 ml-2 mr-2'></img>
-        <h1 className='text-2xl font-serif text-[#4D1354] mr-2 ml-2'>Sense of Tunes</h1>
+    <div className='items-center mb-10'>
+      <div className='container flex justify-between items-center'>
+        <Link to={"/Guide"} className='text-2xl font-serif text-[#4D1354] mr-6 ml-6 mt-4'> Sense of Tunes</Link>
       </div>
       
-      <div className='flex justify-between items-center'>
-        <h1 className='text-2xl font-serif mr-2 ml-2 text-gray-600 hover:text-[#4D1354]'>HissEmoji</h1>
-        <p className='text-2xl font-serif text-[#4D1354]'>|</p>
-        <h1 className='text-2xl font-serif mr-2 ml-2 text-gray-600 hover:text-[#4D1354]'>Beni Şaşırt</h1>
-        <p className='text-2xl font-serif text-[#4D1354]'>|</p>
-        <h1 className='text-2xl font-serif mr-2 ml-2 text-gray-600 hover:text-[#4D1354]'>Trendler</h1>
-        <p className='text-2xl font-serif text-[#4D1354]'>|</p>
-        <h1 className='text-2xl font-serif mr-2 ml-2 text-gray-600 hover:text-[#4D1354]'>Hakkımızda</h1>
-        <p className='text-2xl font-serif text-[#4D1354]'>|</p>
-        <h1 className='text-2xl font-serif mr-2 ml-2 text-gray-600 hover:text-[#4D1354]'>İletişim</h1>
+      <div>
+      <div className='container mx-auto items-center'>
+      <Link to={"/Guide"}>
+      <img src={Logo} alt='Logo' className='mt-2 mb-6 w-36 h-36 mx-auto'></img>
+        </Link>
       </div>
+      <div className='container mx-auto flex items-center justify-center space--4'>
+        <Link to={"/"} className='text-2xl font-serif ml-2 mr-2 text-gray-400 hover:text-[#4D1354]'>Ana Sayfa</Link>
+        <p className='text-2xl font-serif text-[#4D1354]'>|</p>
+        <Link to={"/hissemoji"} className='text-2xl font-serif ml-2 mr-2 text-gray-400 hover:text-[#4D1354]'>HissEmoji</Link>
+        <p className='text-2xl font-serif text-[#4D1354]'>|</p>
+        <Link to={"/BeniSasirt"} className='text-2xl font-serif ml-2 mr-2 text-gray-400 hover:text-[#4D1354]'>Beni Şaşırt</Link>
+        <p className='text-2xl font-serif text-[#4D1354]'>|</p>
+        <Link to={"/Trendler"} className='text-2xl font-serif ml-2 mr-2 text-gray-400 hover:text-[#4D1354]'>Trendler</Link>
+        <p className='text-2xl font-serif text-[#4D1354]'>|</p>
+        <Link to={"/Hakkimizda"} className='text-2xl font-serif ml-2 mr-2 text-gray-400 hover:text-[#4D1354]'>Hakkımızda</Link>
+        <p className='text-2xl font-serif text-[#4D1354]'>|</p>
+        <Link to={"/Iletisim"} className='text-2xl font-serif ml-2 mr-2 text-gray-400 hover:text-[#4D1354]'>İletişim</Link>
+      </div>
+      </div>
+      
 
     </div>
   )

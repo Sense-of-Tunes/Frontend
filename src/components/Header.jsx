@@ -9,7 +9,7 @@ const Header = () => {
       </div>
       
       <div className='flex justify-between items-center'>
-        <h1 className='text-2xl font-serif mr-2 ml-2 text-gray-600 hover:text-[#4D1354]'>Deneme1</h1>
+        <h1 className='text-2xl font-serif mr-2 ml-2 text-gray-600 hover:text-[#4D1354]'>HissEmoji</h1>
         <p className='text-2xl font-serif text-[#4D1354]'>|</p>
         <h1 className='text-2xl font-serif mr-2 ml-2 text-gray-600 hover:text-[#4D1354]'>Beni Şaşırt</h1>
         <p className='text-2xl font-serif text-[#4D1354]'>|</p>

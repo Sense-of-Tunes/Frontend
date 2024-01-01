@@ -1,25 +1,41 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
+import { getMusicByUser } from '../services/musicService'
+import { Link } from 'react-router-dom';
+import { IoHeadset } from "react-icons/io5";
+import { IoSearch } from "react-icons/io5";
 
 function beniSasirt() {
+
+  const [veri, setVeri] = useState([])
+  const [yazi, setYazi] = useState("")
+  const fetchData = async () => {
+    const data = await getMusicByUser(yazi)
+    setVeri(data)
+  }
+
   return (
-    <div className=''>
-        <div className='flex flex-col justify-center items-center gap-2 mt-20'>
-            <input type='text' className='h-10 w-[700px] outline-none rounded-full p-2 bg-gray-200 flex placeholder:text-center text-center' placeholder='Bugün nasıl hissediyorsun?'/>
-            <div>Hissedilen Duygular</div>
-            <div className='font-bold'>Bu duygular Sense of Tunes'da şu anda global trendler oluşturuyolar.</div>
-            {/* <div className='relative'>
-                <div className='absolute top-8 text-5xl -rotate-12 right-40'>❤️</div>
-                <div className='absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-32 text-8xl'>❤️‍🩹</div>
-                <div className='absolute top-28 right-64 rotate-6 text-5xl'>🥳</div>
-                <div className='absolute top-4 rotate-12 text-5xl left-52'>😇</div>
-                <div className='absolute top-6 left-16 -rotate-12 text-5xl'>😜</div>
-                <div className='absolute top-24 text-5xl -rotate-12 left-60'>🤗</div>
-                <div className='absolute top-52 right-48 -rotate-12 text-5xl'>🥺</div>
-                <div className='absolute top-36 right-28 text-5xl -rotate-12'>🤩</div>
-                <div className='absolute top-52 left-14 rotate-3 text-5xl'>😔</div>
-                <div className='absolute text-5xl top-28 left-28 -rotate-12'>😭</div>
-            </div> */}
+    <div>
+      <div className='flex flex-col justify-center items-center gap-2 mt-20'>
+        <div className='relative'>
+          <input type='text' value={yazi} onChange={(e) => { setYazi(e.target.value) }} className='h-10 w-[700px] outline-none rounded-full p-2 bg-gray-200 flex placeholder:text-center text-center' placeholder='Bugün nasıl hissediyorsun?' />
+          <button className='absolute top-2.5 right-4' type='submit' onClick={() => { fetchData() }}><IoSearch size={20}/></button>
         </div>
+        <div>Hissedilen Duygular</div>
+        <div className='font-bold'>Bu duygular Sense of Tunes'da şu anda global trendler oluşturuyolar.</div>
+        <div className='grid grid-cols-4 gap-16'>
+          {
+            veri && veri.map(music => (
+              <div key={music.id} className='mt-4 p-3 border border-gray-200 w-[225px] rounded-xl shadow-xl flex flex-col items-center gap-2 '>
+                <img alt='deneme' className=' rounded-lg' src={music.resim_url} />
+                <div className='flex text-center'>{music.muzik}</div>
+                <div className=' font-light text-gray-400'>{music.sanatci}</div>
+                <Link to={music.muzik_url} target='blank' className='flex items-end'><IoHeadset size={25} /></Link>
+              </div>
+            ))
+          }
+        </div>
+      </div>
     </div>
   )
 }

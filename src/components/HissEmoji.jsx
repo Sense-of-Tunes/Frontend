@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getAllEmoji } from '../services/musicService'
+import { Link } from 'react-router-dom'
 
 function hissemoji() {
 
@@ -17,13 +18,13 @@ function hissemoji() {
     <div className='container mx-auto p-4 grid gap-16'>
 
     
-    <div className='grid grid-cols-3 gap-24'>
+    <div className='grid grid-cols-6 gap-24'>
       {
         veri && veri.map(result =>(
-          <div className='w-64 h-40 border-2 border-color1 rounded-lg flex justify-center flex-col items-center shadow-2xl hover:text-color1 hover:bg-gray-100'>
-        <div className='text-3xl'>{result.emoji}</div>
+          <Link to={result.duygu} className='w-32 rounded-full h-32 border-2 border-color1 flex justify-center flex-col items-center shadow-2xl hover:text-color1 hover:bg-gray-100' key={result.id}>
+        <div className='text-7xl'>{result.emoji}</div>
        
-      </div>
+      </Link>
         ))
       }
     </div> 

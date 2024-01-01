@@ -31,7 +31,7 @@ const Trendler = () => {
           <hr/>
           {
             veri && veri.map(data=>(
-          <div className='flex justify-between items-center text-center mb-4 mt-4 text-serif hover:bg-color1 hover:text-white ' key={data.id}>
+          <div className='flex justify-between items-center text-center mb-4 mt-4 text-serif' key={data.id}>
             <h1 className='mr-2 ml-2'>1</h1>
             <h1 className='mr-2 ml-2'>{data.muzik}</h1>
             <h1 className='mr-2 ml-2'>{data.sanatci}</h1>

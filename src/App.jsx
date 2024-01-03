@@ -58,7 +58,24 @@ function App() {
         ))}
       </Routes>
       <Footer/>
+      <style>{`
+        body {
+          margin: 0;
+          padding: 0;
+        }
+
+        #root {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+        }
+
+        footer {
+          margin-bottom: 0pxs;
+        }
+      `}</style>
     </Router>
+    
   )
 }
 

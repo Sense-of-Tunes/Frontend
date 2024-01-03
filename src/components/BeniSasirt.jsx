@@ -16,7 +16,7 @@ function beniSasirt() {
 
   return (
     <div>
-      <div className='flex flex-col justify-center items-center gap-2 mt-20'>
+      <div className='flex flex-col justify-center items-center gap-2 mt-20 mb-52'>
         <div className='relative'>
           <input type='text' value={yazi} onChange={(e) => { setYazi(e.target.value) }} className='h-10 w-[700px] outline-none rounded-full p-2 bg-gray-200 flex placeholder:text-center text-center' placeholder='Bugün nasıl hissediyorsun?' />
           <button className='absolute top-2.5 right-4' type='submit' onClick={() => { fetchData() }}><IoSearch size={20}/></button>

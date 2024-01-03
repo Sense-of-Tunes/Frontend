@@ -65,17 +65,7 @@ const hakkimizda = () => {
            <a href="https://www.linkedin.com/in/talha-yüce/" target="_blank" rel="noopener noreferrer"><FaLinkedin size={20}/></a>
           </div>
         </div>
-       </div>  
-       
-
-      <div className='text-center font-serif w-[1280px] items-center '> 
-       <p>Sense of Tunes, bir grup müzik tutkunu arkadaşın bir araya gelmesiyle doğdu. Biz, müziğin insan hayatındaki gücünü ve duygusal bağını anlayan bir ekibiz.  </p>
-       <p>Kendi müzik zevklerimizden ve bu tutkuyu paylaşma arzumuzdan ilham alarak,</p>
-       <p>Sense of Tunes’u hayata geçirdik. </p>
-       <p>İnsanları müziğin sihirli dünyasına bağlamak ve duygu durumlarına uygun şarkıları keşfetmelerini </p>
-       <p>sağlamak için yola çıktık.</p>    
-      </div>
-
+       </div> 
     </div>
   )
 }

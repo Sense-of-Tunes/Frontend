@@ -1,50 +1,51 @@
-import React, { useEffect, useState } from 'react'
-import { getTrend } from '../services/musicService'
+import React, { useEffect, useState } from 'react';
+import { getTrend } from '../services/musicService';
 import { FaHeadphones } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 
-
 const Trendler = () => {
-
-  const [veri, setVeri] = useState([])
+  const [veri, setVeri] = useState([]);
 
   useEffect(() => {
-    const fetchData = async ()=>{
-      const data = await getTrend()
-      setVeri(data)
-    }
+    const fetchData = async () => {
+      const data = await getTrend();
+      setVeri(data);
+    };
 
-    fetchData()
-  }, [])
-  
+    fetchData();
+  }, []);
+
   return (
-    <div id='trendler' className='container mx-auto p-2 grid gap-16'>
-      <div className='grid gap-5'>
-        <div className='font-serif mr-2 ml-2 text-gray-600'>
-              <div className='flex justify-between items-center mb-2 text-serif '>
-            <h1 className='mr-2 ml-2'>#</h1>
-            <h1 className='mr-2 ml-2'>Şarkı</h1>
-            <h1 className='mr-2 ml-2'>Sanatçı</h1>
-            <h1 className='mr-2 ml-2'>Duygu</h1>
-            <h1 className='mr-2 ml-2'>Dinle</h1>
-          </div>
-          <hr/>
-          {
-            veri && veri.map(data=>(
-          <div className='flex justify-between items-center text-center mb-4 mt-4 text-serif' key={data.id}>
-            <h1 className='mr-2 ml-2'>1</h1>
-            <h1 className='mr-2 ml-2'>{data.muzik}</h1>
-            <h1 className='mr-2 ml-2'>{data.sanatci}</h1>
-            <h1 className='mr-2 ml-2'>{data.duygu}</h1>
-            <h1 className='mr-2 ml-2'><Link to={data.muzik_url} target='blank'><FaHeadphones size={15}/></Link></h1>
-          </div>
-            ))
-          }
-          </div>
-        </div>
-      
+    <div id='trendler' className='container mx-auto p-2'>
+      <table className='table-fixed w-full border-collapse'>
+        <thead>
+          <tr>
+            <th className='w-1/12 px-4 py-2'>#</th>
+            <th className='w-4/12 px-4 py-2'>Şarkı</th>
+            <th className='w-3/12 px-4 py-2'>Sanatçı</th>
+            <th className='w-2/12 px-4 py-2'>Duygu</th>
+            <th className='w-2/12 px-4 py-2'>Dinle</th>
+          </tr>
+        </thead>
+        <tbody>
+          {veri &&
+            veri.map((data, index) => (
+              <tr key={data.id}>
+                <td className='px-4 py-2 text-center'>{index + 1}</td>
+                <td className='px-4 py-2 text-center'>{data.muzik}</td>
+                <td className='px-4 py-2 text-center'>{data.sanatci}</td>
+                <td className='px-4 py-2 text-center'>{data.duygu}</td>
+                <td className='px-4 py-2 flex items-center justify-center'>
+                  <Link to={data.muzik_url} target='_blank'>
+                    <FaHeadphones className='mr-0' size={15} />
+                  </Link>
+                </td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
     </div>
-  )
-}
+  );
+};
 
-export default Trendler
+export default Trendler;

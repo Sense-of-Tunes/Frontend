@@ -36,6 +36,7 @@ function App() {
         <Route path='/Trendler' element={<Trendler/>}/>
         <Route path='/Hakkimizda' element={<Hakkimizda/>}/>
         <Route path='/Iletisim' element={<Iletisim/>}/>
+        <Route path='/SikSorulanSorular' element={<SikSorulanSorular/>}/>
         {veri.map((data) => (
           <Route
             key={data.id}
@@ -44,7 +45,6 @@ function App() {
           />
         ))}
       </Routes>
-
       <Footer/>
     </Router>
   )

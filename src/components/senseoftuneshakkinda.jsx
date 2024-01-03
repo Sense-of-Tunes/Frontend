@@ -17,7 +17,7 @@ const senseoftuneshakkinda = () => {
         <h3 className='text-2xl text-[#4D1354] font-bold mb-2'>Haydi, Müziğin Tınısına Kulak Ver!</h3>
         <h4 className='text-xl text-black'>Sense of Tunes olarak, sizleri müziğin büyülü dünyasına davet ediyoruz. Kendi müzik yolculuğunuzu başlatın, duygusal anlarınıza eşlik eden şarkıları keşfedin ve müzik tutkusunu paylaşın.</h4>
         <br></br>
-        <h4 className='text-xl text-[#4a4949] text-right '>Sense of Tunes Ekibi</h4>
+        <h4 className='text-xl text-[#979393] text-right '>Sense of Tunes Ekibi</h4>
         </div>
     </div>
   )

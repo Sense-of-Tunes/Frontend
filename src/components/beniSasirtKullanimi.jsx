@@ -1,6 +1,6 @@
 import React from 'react'
 
-const gizlilik = () => {
+const beniSasirtKullanimi = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const gizlilik = () => {
   )
 }
 
-export default gizlilik
+export default beniSasirtKullanimi

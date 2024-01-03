@@ -57,12 +57,12 @@ function sikSorulanSorular() {
         <h4 className='text-xl text-black'>Evet, beğendiğiniz şarkıları favorilere ekleyerek kendi trend listelerinizi oluşturabilirsiniz.</h4>
         <h3 className='text-2xl text-[#4D1354] font-bold mb-2'>7. Trendler Menüsünü Paylaşabilir miyim?</h3>
         <h4 className='text-xl text-black'>Evet, beğendiğiniz trendleri sosyal medyada paylaşabilir ve arkadaşlarınızla bu ayın popüler müziklerini keşfetmelerini sağlayabilirsiniz.</h4>
-        <h3 className='text-2xl text-[#4D1354] font-bold mb-2'>8. HissEmoji Menüsü Ücretsiz mi?</h3>
-        <h4 className='text-xl text-black'>Evet, HissEmoji Menüsü tamamen ücretsizdir. Duygularınıza uygun şarkıları keşfetmek için özgürce kullanabilirsiniz.</h4>
-        <h3 className='text-2xl text-[#4D1354] font-bold mb-2'>9. Menüde Yeni Duygu Kartları Ekleniyor mu?</h3>
-        <h4 className='text-xl text-black'>Evet, HissEmoji Menüsü düzenli olarak güncellenir ve yeni duygu kartları eklenir. Böylece müzik keşiflerinizi sürekli olarak genişletebilirsiniz.</h4>
-        <h3 className='text-2xl text-[#4D1354] font-bold mb-2'>10. Duygu Kartlarının Anlamları Nelerdir?</h3>
-        <h4 className='text-xl text-black'>Her duygu kartının altında küçük bir açıklama bulunur. Kartları seçerken bu açıklamalardan faydalanabilir ve hissettiğiniz duyguyu daha iyi ifade edebilirsiniz.</h4>
+        <h3 className='text-2xl text-[#4D1354] font-bold mb-2'>8. Trendler Menüsü Ücretsiz mi?</h3>
+        <h4 className='text-xl text-black'>Evet, Trendler Menüsü tamamen ücretsizdir. Müziğin güncel trendlerini keşfetmek için ücretsiz olarak kullanabilirsiniz.</h4>
+        <h3 className='text-2xl text-[#4D1354] font-bold mb-2'>9. Hangi Sıklıkla Güncellenir?</h3>
+        <h4 className='text-xl text-black'>Trendler Menüsü her ay güncellenir, böylece her zaman müziğin en güncel ve popüler şarkılarına erişebilirsiniz.</h4>
+        <h3 className='text-2xl text-[#4D1354] font-bold mb-2'>10. Trendlerle İlgili Daha Fazla Bilgi Alabilir miyim?</h3>
+        <h4 className='text-xl text-black'>Evet, her trend şarkısı altında kısa bir açıklama ve kullanıcı yorumları bulunur. Bu bilgileri inceleyerek şarkılar hakkında daha fazla bilgi edinebilirsiniz.</h4>
     </div>
   )
 }

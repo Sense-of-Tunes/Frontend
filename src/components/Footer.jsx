@@ -1,34 +1,36 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  return (
-  <div className='bg-[#4D1354]'>
-    <div className='flex'>
-      <div className='container mx-auto items-center grid grid-cols-4 gap-4 mt-4  '>
-        <div class="">
-          <div class="flex-grow">
-            <h1 className='text-2xl font-serif text-white mr-4 mt-5 text-center'>Nasıl Kullanılır?</h1>
-            <h2 className="font-serif text-current my-4 text-center mt-10">HissEmoji</h2>
-          </div>
-          {/* <div class="flex-grow">
-            <h1 className='text-2xl font-serif text-white mr-4 mt-5 text-center'>Sıkça Sorulan Sorular</h1>
-            <h2 className="font-serif text-current my-4 text-center mt-10">HissEmoji</h2>
-          </div> 
-          <div class="flex-grow">
-            <h1 className='text-2xl font-serif text-white mr-4 mt-5 text-center'>İletişim</h1>
-            <h2 className="font-serif text-current my-4 text-center mt-10">HissEmoji</h2>
-          </div> 
-          <div class="flex-grow">
-            <h1 className='text-2xl font-serif text-white mr-4 mt-5 text-center'>Sense of Tunes Hakkında</h1>
-            <h2 className="font-serif text-current my-4 text-center mt-10">HissEmoji</h2>
-          </div>  */}
-        </div>
-      </div>
-    </div>
-  </div>
   
-    
+  return (
+    <div className='bg-[#4D1354]'>
+      <div className='font-serif container mx-auto p-4 grid grid-cols-4 gap-10 mb-8 mt-4'>
+          <div>
+          <div className='text-white text-xl'>Nasıl Kullanılır?
+            <div className='text-slate-400 grid grid-rows-3 mt-1 ml-3'>
+              <Link to="/hissemojikullanimi">HissEmoji</Link>
+              <Link to="/benisasirtkullanimi">Beni Şaşırt</Link>
+              <Link to="/trendlerkullanimi">Trendler</Link>
+            </div>  
+          </div>
+        </div>
+        <div className='text-white text-xl'>
+          <Link to="/siksorulansorular">Sık Sorulan Sorular</Link>
+        </div>
+        <div className='text-white text-xl'>Kaynaklar
+          <div className='text-slate-400 grid grid-rows-3 mt-1 ml-3'>
+            <Link to="/gizlilik">Gizlilik ve Politikaları</Link>
+            <Link to="/hukumler">Hükümler ve Koşullar</Link>
+          </div>
+        </div>
+        <div className='text-white text-xl'>
+          <Link to="/senseoftuneshakkinda">Sense of Tunes Hakkında</Link>
+        </div>
+      </div>  
+    </div>
   )
 }
 
 export default Footer
+

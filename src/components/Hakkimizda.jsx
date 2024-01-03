@@ -64,8 +64,10 @@ const hakkimizda = () => {
            <a href="https://github.com/talha-yce" target="_blank" rel="noopener noreferrer"><FaGithub size={20}/></a>
            <a href="https://www.linkedin.com/in/talha-yüce/" target="_blank" rel="noopener noreferrer"><FaLinkedin size={20}/></a>
           </div>
+          
         </div>
        </div> 
+       <br></br>
     </div>
   )
 }

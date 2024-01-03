@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import { getAllEmoji } from './services/musicService';
 import { useEffect,useState } from 'react';
 import DuyguSayfasi from './components/DuyguSayfasi';
+import Senseoftuneshakkinda from './components/senseoftuneshakkinda';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path='/Hakkimizda' element={<Hakkimizda/>}/>
         <Route path='/Iletisim' element={<Iletisim/>}/>
         <Route path='/SikSorulanSorular' element={<SikSorulanSorular/>}/>
+        <Route path='/Senseoftuneshakkinda' element={<Senseoftuneshakkinda/>}/>
         {veri.map((data) => (
           <Route
             key={data.id}
